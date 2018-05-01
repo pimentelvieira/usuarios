@@ -13,7 +13,7 @@ class UsuarioController {
     lateinit var usuarioService: UsuarioService
 
     @GetMapping
-    fun getPorLoginESenha(@RequestParam("login") login: String, @RequestParam("senha") senha: String): Usuario {
+    fun getPorLoginESenha(@RequestParam("login") login: String, @RequestParam("senha") senha: String): Usuario? {
         return usuarioService.buscarPorLoginESenha(login, senha)
     }
     @PostMapping

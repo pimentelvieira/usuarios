@@ -16,7 +16,7 @@ class UsuarioService {
         return usuario
     }
 
-    fun buscarPorLoginESenha(login: String, senha: String) : Usuario {
+    fun buscarPorLoginESenha(login: String, senha: String) : Usuario? {
         return usuarioRepository.findByLoginAndSenha(login, senha)
     }
 
